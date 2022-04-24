@@ -1,9 +1,8 @@
-import next from 'next';
-import dbConnect from './_dbConnect';
-const Word = require("./_word");
+import dbConnect from '../../lib/dbConnect';
+const Word = require("../../models/word");
 
 export default async function handler(req, res) {
-  const { method } = req
+  const { method } = req;
   await dbConnect();
 
   switch (method) {
