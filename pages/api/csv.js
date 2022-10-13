@@ -1,21 +1,6 @@
 import dbConnect from "../../lib/dbConnect";
 import Word from "../../models/word";
 
-const testData = [
-    {
-    "amharic": "megzat",
-    "geez": "",
-    "english": "to buy",
-    "category": "verb"
-    },
-    {
-    "amharic": "mesrat",
-    "geez": "",
-    "english": "to work",
-    "category": "verb"
-    }
-]
-
 export default async function handler(req, res) {
   const { method } = req;
   await dbConnect();
