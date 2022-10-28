@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   switch (method) {
     case 'GET':
       try {
-        const words = await Word.find({category: "Verb"}, '-__v')
+        const words = await Word.findOne({category: "Verb"}, '-__v')
           .sort({ '_id': -1 });
 
         console.log(words);
